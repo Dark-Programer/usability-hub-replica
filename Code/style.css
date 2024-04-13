@@ -1,0 +1,367 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;700&family=Poppins:wght@400;500&display=swap");
+
+/* Defult styles Starts */
+
+/* restes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --primary-text-color: #183b56;
+  --secondary-text-color: #577592;
+  --accent-color: #2294ed;
+  --accent-color-dark: #1d69a3;
+  --padding-inline-section: 20px; /* An element's padding-inline is the space from its border to its content in the inline direction */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-text-color);
+}
+
+/* headings */
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* paragraphs */
+p {
+  font-family: "Golos Text", sans-serif;
+  font-size: 1.25rem;
+  color: var(--secondary-text-color);
+  line-height: 1.8rem; /* The line-height property specifies the height of a line */
+}
+
+/* For links / ancer tags */
+a {
+  text-decoration: none; /* Remove under lines from links */
+  display: inline-block; /* To display all links in a line */
+}
+
+/* For lists */
+ul {
+  list-style: none;
+}
+
+/* Defult styles Ends */
+
+/* Utility class (Most use classes) */
+
+.small-bold-text {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1180px; /* The max-width property defines the maximum width of an element. */
+  /* margin-inline property use to add margins in left and right side.  */
+  /* margin-inline: auto use to set the container in the center of the window */
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.hover-links {
+  color: var(--primary-text-color);
+}
+
+.hover-links:hover {
+  color: var(--accent-color);
+  transition: 0.2s ease-out;
+}
+
+.primary-button {
+  background-color: var(--accent-color);
+  border-radius: 6px;
+  font-weight: 600;
+  color: white !important; /* at any situation text colour is white for theis !important porperty */
+  padding: 12px 24px;
+
+  /* 
+  in box shadow property
+    add shadows behind the box
+    set box shadow blur with 2px   
+    set shadow to secondary-text colour
+  */
+  box-shadow: 0 0 2px var(--secondary-text-color); /* The box-shadow property attaches one or more shadows to an element  */
+  transition: 0.2 ease-out;
+}
+
+.primary-button:hover {
+  background-color: var(--accent-color-dark);
+}
+
+.secondary-button {
+  border: 0.5px solid var(--secondary-text-color);
+  color: var(--primary-text-color) !important;
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: 0.2 ease-out;
+}
+
+.secondary-button:hover {
+  border-color: var(--accent-color-dark);
+  color: var(--accent-color) !important;
+}
+
+/* top banner utilities */
+
+.top-banner {
+  background-image: url(./assets/asset\ 32.png);
+  background-color: #e74694;
+  background-size: 300px; /* background image size is 300px */
+}
+
+.banner-text {
+  color: white;
+  padding: 15px 30px; /*top, bottom = 15px padding  and  left, right = 30px padding */
+  text-align: center;
+}
+
+/* nav bar utilities */
+
+.main-nav {
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.company-logo img {
+  width: 200px;
+}
+
+/* nav links styles */
+.nav-links {
+  /* width of nav links is 730px */
+  flex-basis: 730px; /* The flex-basis property specifies the initial length of a flexible item */
+}
+
+.nav-links ul {
+  justify-content: end; /*List links are set in end of flex */
+  gap: 40px; /* The gap property defines the size of the gap between the rows and between the columns in flexbox, grid or multi-column layout */
+}
+
+/* sections */
+
+/* hero section */
+header {
+  /* 
+  padding in top is set with 50px 
+  inline padding is set with 20px
+  padding in bottom is set with 0
+  */
+  padding: 50px var(--padding-inline-section) 0;
+}
+
+.header-section {
+  justify-content: center;
+  gap: 50px; /* gap between header lef and right is set with 50 px */
+}
+
+.header-left {
+  max-width: 40vw;
+}
+
+.header-left h1 {
+  margin-top: 20px;
+  font-weight: 560;
+}
+
+.header-left p {
+  margin-top: 20px;
+}
+
+.header-left a {
+  margin-top: 20px;
+}
+
+.header-right img {
+  width: 600px;
+}
+
+/* companies section*/
+.companies-header {
+  text-align: center;
+  padding: 15px 30px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  color: var(--primary-text-color);
+  font-weight: 430;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 46px;
+}
+
+/* features problem */
+
+.features-section {
+  margin-top: 120px;
+  /* padding = top left_&_right buttom */
+  padding: 80px var(--padding-inline-section) 0;
+  background-image: url(./assets/asset\ 34.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.features-header, .example-header {
+  text-align: center;
+}
+
+.features-header h2{
+  margin-bottom: 0px;
+  font-weight: 500;
+}
+
+/* featurtes cards */
+
+.features-area{
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px; /* Gap between 2 row */
+  margin-top: 40px;
+}
+
+.features-card {
+  flex-direction: column;
+  gap: 20px;
+  max-width: 30%;
+  text-align: center;
+}
+
+.features-card img {
+  width: 50px;
+}
+
+/* BIg feature section */
+
+.big-features-section {
+  padding: 60px var(--padding-inline-section) 0;
+}
+
+.big-feature-container{
+  gap: 30px;
+}
+
+.feature-img img {
+  /* width is related to its's perretnt */
+  width: 100%;
+}
+
+.feature-description {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Example */
+.example-header h2 {
+  margin-top: 50px;
+  margin-bottom: 16px;
+}
+
+.example-header{
+  flex-direction: column;
+  gap: 20px;
+}
+
+.example-area {
+  justify-content: space-between;
+  margin-block: 30px;
+}
+
+.exaple-cards {
+  margin-top: 25px;
+  width: 23%;
+  position: relative;
+  min-height: 300px;
+  background-image: url(./assets/asset\ 36.jpeg);
+  background-size: cover;
+  transition: 0.2s ease-out;
+}
+
+.exaple-cards:hover{
+  /* 10px blur applied on box shadow */
+  box-shadow: 0 0 10px gray;
+}
+
+.card-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: rgba(80, 75, 75, 0.911);
+}
+
+/* CTA Section */
+
+.cta-section-container{
+  flex-direction: column;
+  gap: 30px;
+  color: white;
+}
+
+.cta-section{
+  background-color: #183b54;
+  padding: 120px var(--padding-inline-section);
+}
+
+.cta-section-container p {
+  color: whitesmoke;
+  margin-top: 20px;
+}
+
+/* Footer */
+
+footer {
+  background-color: #ebf2fa;
+}
+
+.footer-container{
+  align-items: flex-start;
+  justify-content: space-between;
+  /* margin-top: 10px; */
+}
+
+.link-column h4 {
+  margin-bottom: 10px;
+}
+
+.link-column{
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px
+}
+
+/* Sub Footer */
+.subfooter{
+  background-color: #b9cde4;
+  padding: var(--padding-inline-section);
+  margin-top: 3px;
+}
+
+.subfooter-container{
+  justify-content: space-between;
+}
